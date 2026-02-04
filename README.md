@@ -57,7 +57,7 @@ Matthews Correlation Coefficient (MCC)
 
 
 
-4. Observations on Model Performance (3 Marks)
+4. Observations on Model Performance
    
 <img width="1300" height="240" alt="image" src="https://github.com/user-attachments/assets/0cdad0a1-1fcc-4d4e-aeca-eb8c81fad338" />
 
