@@ -53,11 +53,12 @@ F1 Score
 
 Matthews Correlation Coefficient (MCC)
 
-<img width="706" height="237" alt="image" src="https://github.com/user-attachments/assets/fe1f9f81-add8-43a6-a700-dadef5d626dd" />
+<img width="784" height="272" alt="image" src="https://github.com/user-attachments/assets/79686f92-4d96-45e7-92f6-ea7cf20d1a14" />
 
 
 
 4. Observations on Model Performance (3 Marks)
    
 <img width="1300" height="240" alt="image" src="https://github.com/user-attachments/assets/0cdad0a1-1fcc-4d4e-aeca-eb8c81fad338" />
+
 
