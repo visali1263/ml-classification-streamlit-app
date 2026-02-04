@@ -113,3 +113,45 @@ if hasattr(model, "predict_proba"):
 # Metrics display
 # ----------
 
+# -------------------------------------------------
+# Display uploaded dataset
+# -------------------------------------------------
+st.subheader("📄 Uploaded Dataset Preview")
+st.dataframe(data.head())
+
+st.write("Dataset Shape:", data.shape)
+st.write("Feature Columns:", X.columns.tolist())
+
+# -------------------------------------------------
+# Evaluation Metrics
+# -------------------------------------------------
+st.subheader("📊 Model Evaluation Metrics")
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.metric("Accuracy", f"{accuracy_score(y_true, y_pred):.4f}")
+    st.metric("Precision", f"{precision_score(y_true, y_pred, average='weighted'):.4f}")
+
+with col2:
+    st.metric("Recall", f"{recall_score(y_true, y_pred, average='weighted'):.4f}")
+    st.metric("F1 Score", f"{f1_score(y_true, y_pred, average='weighted'):.4f}")
+
+with col3:
+    st.metric("MCC", f"{matthews_corrcoef(y_true, y_pred):.4f}")
+    st.metric("ROC-AUC", auc_score if auc_score == "N/A" else f"{auc_score:.4f}")
+
+# -------------------------------------------------
+# Confusion Matrix
+# -------------------------------------------------
+st.subheader("🧮 Confusion Matrix")
+cm = confusion_matrix(y_true, y_pred)
+st.write(cm)
+
+# -------------------------------------------------
+# Classification Report
+# -------------------------------------------------
+st.subheader("📑 Classification Report")
+st.text(classification_report(y_true, y_pred))
+
+
