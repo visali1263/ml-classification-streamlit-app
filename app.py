@@ -93,7 +93,15 @@ try:
 except FileNotFoundError:
     st.error("❌ Model file not found. Please check the /model directory.")
     st.stop()
+# Load scaler
+try:
+    with open("model/scaler.pkl", "rb") as f:
+        scaler = pickle.load(f)
+except FileNotFoundError:
+    st.error("❌ Scaler file not found. Please check the /model directory.")
+    st.stop()
 
+X_scaled = scaler.transform(X)
 # Predictions
 y_pred = model.predict(X)
 
@@ -101,7 +109,7 @@ y_pred = model.predict(X)
 auc_score = "N/A"
 if hasattr(model, "predict_proba"):
     try:
-        y_prob = model.predict_proba(X)
+        y_prob = model.predict_proba(X_scaled)
         if y_prob.shape[1] == 2:
             auc_score = roc_auc_score(y_true, y_prob[:, 1])
         else:
