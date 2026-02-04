@@ -62,3 +62,6 @@ Matthews Correlation Coefficient (MCC)
 <img width="1300" height="240" alt="image" src="https://github.com/user-attachments/assets/0cdad0a1-1fcc-4d4e-aeca-eb8c81fad338" />
 
 
+NOTE : The scaler used during training is saved and reused during inference to maintain feature consistency.
+
+
