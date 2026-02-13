@@ -30,10 +30,6 @@ st.set_page_config(
 
 st.title("📊 ML Assignment 2 – Classification Models")
 
-st.markdown("""
-This Streamlit application demonstrates multiple **machine learning classification models**
-as required in **ML Assignment-2**.
-""")
 
 # -------------------------------------------------
 # Sidebar controls
